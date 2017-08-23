@@ -1,0 +1,1 @@
+alert("大航海时代开启！one piece")

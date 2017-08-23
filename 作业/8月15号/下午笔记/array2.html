@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//定义一个方法，求数组中最大的元素
+		//定义一个变量 数组中第一个元素
+//		function getmax(arr) {
+//			var max = arr[0];
+//			for (var i=1;i<arr.length;i++) {
+//				//max>arr[i]||(max=arr[i]);
+//				max>arr[i]?max:max=arr[i];
+//			}
+//			return max
+//		}
+//		var arr=[1,2,3,45,6,23,2345,213,1234];
+//		console.log(getmax(arr));
+
+		//定义一个方法，用来查找某个元素在不在数组中
+		//在数组中 返回他的下标，如果不在返回-1
+//		function indexof(arr,str) {
+//			for (var i=0;i<arr.length;i++) {
+//				if (arr[i] == str) {
+//					return "下标："+i;
+//				}
+//			}
+//			return -1;
+//		}
+//		var arr=["小明","小红","小黑","小黄","小白"]
+//		console.log(indexof(arr,"阿紫"));
+		
+		var arr=[1,53,36,132,45,23,57];
+		function  Bubblesort(arr) {
+			for (var r=0;r<arr.length-1;r++) {
+				for (var c=0;c<arr.length-r-1;c++) {
+					if (arr[c]>arr[c+1]) {
+						arr[c]+=arr[c+1];
+						arr[c+1] = arr[c]-arr[c+1]
+						arr[c]-=arr[c+1];
+					}
+				}
+			
+			}
+		}
+		Bubblesort(arr);
+		console.log(arr)
+		
+		
+	</script>
+</html>

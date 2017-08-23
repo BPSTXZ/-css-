@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+	</body>
+	<script>
+		var odiv = document.getElementsByTagName("div");
+		var op = document.createElement("p");
+		op.innerHTML = "分割线";
+		document.body.insertBefore(op,odiv[3]);
+		var cld = document.body.children;
+		console.log(cld)
+		for (var i=0;i<cld.length;i++){
+			cld[i].onclick = function() {
+				document.body.removeChild(this)
+			}
+		}
+		document.body.replaceChild(op,odiv[0])
+	</script>
+</html>

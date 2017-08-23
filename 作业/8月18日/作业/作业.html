@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+	     * {margin: 0;padding: 0;}
+		.box{			
+		 width: 600px;
+		 height: auto;
+		 margin:100px auto;
+		 padding:30px 0;
+		}
+		 textarea{
+		 width: 450px;
+		 height: 20px;
+		 resize:none;
+		 margin-left: 20px;
+		 }
+		 ul li{
+		 width: 350px;
+		 list-style: none;
+		 border-bottom: 1px dotted #ccc;
+		 margin-left:110px;
+		 line-height: 30px;
+		 color: #333;
+		 }
+		 ul li a{
+		 float: right;
+		 font-size: 12px;
+		 }
+	</style>
+	<body>
+		<div class="box" id="box">
+			输入内容：
+			<textarea ></textarea>
+			<button>发布</button>
+		</div>		
+	</body>
+	<script>
+		window.onload =function () {
+		    var box=document.getElementById("box");
+			var boy=box.children;
+			console.log(boy);
+			var ul =document.createElement("ul");
+			box.appendChild(ul);
+			boy[1].onclick =function (){
+				//核心点击事件
+				if (boy[0].value=="") {
+					alert("呆瓜，你不输入内容发布个屁啊");
+					return;
+				}			
+			var newli=document.createElement("li");
+			newli.innerHTML=boy[0].value+"<a href='javascript:;'>朕不满意</a>";
+			var lis=ul.children;
+			//使输入的新内容处于最前一行也就是[0]
+			if (lis.length==0) {
+				ul.appendChild(newli);
+			} else{
+				ul.insertBefore(newli,lis[0]);
+			}
+			var as=document.getElementsByTagName("a");
+			//朕不满意，就使它删除
+			 for (var i=0;i<as.length;i++){
+			 as[i].onclick=function(){
+			 ul.removeChild(this.parentNode);
+			 }
+			 }
+			 }
+		}
+	</script>
+</html>

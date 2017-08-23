@@ -1,0 +1,65 @@
+内置对象：ES标准已经定义好的，由浏览器厂商已经实现的对象
+	11：String Number Boolean Array Date Math RegExp Error
+		Function Object Global(Window)
+
+Error:
+	程序错误：程序无法正常执行的异常状态
+	js一但发生错误，就会创建一个Error类型对象
+	6中：
+		ReferenceError：引用错误，找不到对象
+		TypeError：类型错误，错误适用对象或对象方法
+		SyntaxError：语法错误
+		URLError：url地址错误
+		RangeError：范围错误，参数超范围
+		EvalError：调用eval函数错误
+	错误处理：发生错误时，保证程序不中断
+	how:
+		try{
+			可能会出现错误的代码
+		}catch(err){ err中发生错误时会自动收集创建的error对象
+			console.log(err.name);
+			console.log(err.message);
+		}finally{
+			无论发生或不发生错误，都执行这段代码
+		}
+	throw new Error("自定义错误消息")
+Array
+	程序 =算法+数据结构
+		好的数据结构可以极大提高程序运算效率
+		相关多个数据，集中存储集中管理
+	数组：一组连续变量组成的集合，并且起一个名字
+		批量管理多个数据
+	创建		赋值		取值
+	1、创建：
+		var 变量名 = [] 创建一个空数组
+		var 变量名 = [值1,值2,值3...] 
+		var 变量名 = new Array();
+		var 变量名 = new Array(n);
+		var 变量名 = new Array(值1,值2,值3...);
+	js数组 和其他语言数组区别
+		js数组下标越界不会出错
+		为不存在位置取值 结果返回undefined
+		为不存在位置赋值 会自动创建指定的新下标元素
+	数组是对象，
+	1、.length
+		arr[arr.length-1]任意长度数组中最后一个元素
+		改小长度可以删除数组末尾元素
+		arr[arr.length]向数组末尾加元素
+	2、数组遍历
+	3、关联数组：可以自定义下标的名称
+		1、创建关联数组：
+			创建一个空数组
+		2、创建数组同时定义
+			
+
+
+
+
+
+
+
+
+
+
+
+

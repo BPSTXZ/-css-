@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+//		try{
+//			consoe.log(1)
+//		}catch(err){
+////			console.log(err.name);
+////			console.log(err.message)
+//		}finally{
+//			console.log(1)
+//		}
+		var input = prompt("请输入一个数字");
+		function fun1(num) {
+			if (isNaN(num)) {
+				throw new Error("你瞎么")
+			} else{
+				alert(num);
+			}
+		}
+		function fun2(input) {
+			try{
+				fun1(input)
+			}catch(e){
+				console.log(e)
+			}
+		}
+		fun2(input);
+	</script>
+</html>

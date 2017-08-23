@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="checkbox" /><span>全选</span>
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+	</body>
+	<script>
+		var checkall=
+		document.getElementsByTagName('input')[0];
+		var checkmin=
+		document.getElementsByTagName('input');
+		checkall.onclick=function  () {
+			for (var i=0;i<checkmin.length;i++) {
+				checkmin[i].checked=checkall.checked;
+			}		
+		}
+	</script>
+</html>

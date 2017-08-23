@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	for (var num=2;num<10000;num++) {
+			var q=parseInt(num/1000),
+			b=parseInt(num%1000/100),
+			s=parseInt(num%100/10),
+			g=num%10;
+			if(q==0){
+				if (b*b*b+s*s*s+g*g*g == num){
+					console.log(num)
+				}
+			}else{
+				if (q*q*q*q+b*b*b*b+s*s*s*s+g*g*g*g == num){
+					console.log(num)
+				}
+			}
+		}
+	</script>
+</html>
+
+
+

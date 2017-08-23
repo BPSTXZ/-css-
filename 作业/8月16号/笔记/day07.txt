@@ -1,0 +1,36 @@
+String：多个字符组成的一个只读的集合
+	凡数组对象中，不改变原对象的api字符串都可以直接拿过来用
+String API:
+	1、转义字符
+	2、大小写转换
+		.toUpperCase()转大写
+		.toLowerCase()转小写
+	3、获取指定位置字符串
+		str[i];
+		.charAt()
+		charCodeAt()
+		String.fromCharCode()
+	4、在字符串中获取关键词的位置
+		indexOf(“关键词”,位置)；
+	5、替换	
+	6、截取
+	7、分割字符串
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

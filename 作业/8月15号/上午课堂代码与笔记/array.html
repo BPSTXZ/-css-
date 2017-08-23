@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var arr=["日","一","二","三","四","五","六"];
+		console.log(arr[0]);
+		arr[0]="星期"+arr[0];
+		console.log(arr);
+		var m=100;
+		var n=m;
+		n++;
+		console.log(m);
+		var my =["包","包","包","包","包","包","包"];
+		var gf = my;
+		gf[1]="";
+		console.log(my);
+		my=null;
+		console.log(my);
+		
+		
+		console.log(arr[100]);
+		arr[100] = 100;
+		console.log(arr)
+		arr.length-=1;
+		console.log(arr);
+		arr[arr.length]= 100;
+		console.log(arr);
+		
+		//定义一个空数组，向数组中反复输入员工姓名 exit返回数组
+		var arr=[]
+		var input="";
+//		while(input!="exit"){
+//			input=prompt("员工姓名");
+//			if (input!="exit") {
+//				arr[arr.length]=input;
+//			}
+//		}
+		while ((input=prompt("员工姓名"))!="exit"){
+			arr[arr.length]=input;
+		}
+		console.log(arr)
+		
+	</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//定义一个方法
+//		function remove(num) {
+//			/*var n=0;//返回数字
+//			while (num){
+//				n = n*10+num%10;
+//				num=parseInt(num/10);
+//			}*/
+//			for(var n=0;num;num=parseInt(num/10)){
+//				n = n*10+num%10;
+//			}
+//			document.write(n);
+//		}
+//		remove(prompt("请输入数字"));
+		
+		function  findseven(b) {
+			for (var n=1;n<b;n++) {//遍历范围内的数字
+				//分别获取每位数
+				var num=n;//保存判断的数字
+				while (num){//判断各位数是否含7
+					if (num%10==7) {//判断个是否是7
+						console.log(n);
+						break;//一但出现第一个7就判断下一个数字
+					}
+					num =parseInt(num/10);//判断下一位数	
+				}
+			}
+		}
+		findseven(100);
+	</script>
+</html>

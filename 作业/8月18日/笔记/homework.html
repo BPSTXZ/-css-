@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var arr=[];
+		for (var c=48;c<=57;arr.push(String.fromCharCode(c++)));
+		for (var c=65;c<=90;arr.push(String.fromCharCode(c++)));
+		for (var c=97;c<=122;arr.push(String.fromCharCode(c++)));
+		function getcode() {
+			for (var i=0,code=[];i<4;i++) {
+				code.push(arr[parseInt(Math.random()*arr.length)]);
+			}
+			return code.join("")
+		}
+		console.log(getcode());
+	</script>
+</html>

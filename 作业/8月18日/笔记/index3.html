@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+			<div id="box">box</div>
+			<div class="box2">box2</div>
+			<table id="tablebox"></table>
+	</body>
+	<script>
+		var odiv = document.createElement("div");
+		console.log(odiv);
+		odiv.className="odiv";
+		odiv.innerHTML="odiv";
+		document.body.appendChild(odiv);
+		var box = document.querySelector("#box");
+		console.log(box);
+		var box2 = document.querySelector(".box2");
+		console.log(box2);
+		var  json=[{"oname":"Tom","salary":"8000","age":"20"},{"oname":"Will","salary":"6000","age":"25"},{"oname":"Jack","salary":"12000","age":"27"},{"oname":"Timmer","salary":"6000","age":"13"}];
+		var table = document.querySelector("#tablebox")
+		var thead = document.createElement("thead");
+		var th1 =document.createElement("th");
+		th1.innerHTML = "姓名";
+		var th2 =document.createElement("th");
+		th2.innerHTML = "薪资";
+		var th3 =document.createElement("th");
+		th3.innerHTML = "年龄";
+		thead.appendChild(th1);
+		thead.appendChild(th2);
+		thead.appendChild(th3);
+		table.appendChild(thead);
+		for (var i=0;i<json.length;i++) {
+			var tr = document.createElement("tr");
+			var tdname = document.createElement("td");
+				tdname.innerHTML = json[i].oname;
+			var tdsalary = document.createElement("td");
+				tdsalary.innerHTML = json[i].salary;
+			var tdage = document.createElement("td");
+				tdage.innerHTML = json[i].age;
+			tr.appendChild(tdname);
+			tr.appendChild(tdsalary);
+			tr.appendChild(tdage);
+			table.appendChild(tr)
+		}
+	</script>
+</html>

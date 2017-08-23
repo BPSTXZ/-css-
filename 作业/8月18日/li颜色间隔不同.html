@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{margin: 0;padding: 0;}
+		li{height: 50px;margin-bottom: 50px;}
+	</style>
+	<body>
+		<ul>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+		</ul>
+	</body>
+	<script>
+		var list=document.getElementsByTagName("li");
+		for (var i=0;i<list.length;i++) {
+				if (i%2==0) {
+				list[i].style.background="#ADFF2F";
+			} else{
+				list[i].style.background="#6A5ACD";
+			}
+		}
+		//在不改变类名和css下,改变指定位置的节点样式
+		document.getElementsByTagName("ul")[0].getElementsByTagName('li')[2].style.color="red";
+	</script>
+</html>

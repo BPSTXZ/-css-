@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin:0;padding: 0;}
+			table{border: 1px solid #000000;margin: 30px auto;}
+			td{width: 150px;height: 50px;text-align: center;}
+			button{width: 25px;height: 25px;}
+		</style>
+	</head>
+	<body>
+		<table cellspacing="0" rules="all">
+			<thead>
+				<th>商品名称</th>
+				<th>单价（¥）</th>
+				<th>数量</th>
+				<th>小计</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>iPhone7</td>
+					<td class="price">4600</td>
+					<td>
+						<button onclick="calc(this)">+</button>
+						<span class="num">1</span>
+						<button onclick="calc(this)">-</button>
+					</td>
+					<td class="money">4600</td>
+				</tr>
+				<tr>
+					<td>iPhone7Plus</td>
+					<td class="price">5600</td>
+					<td>
+						<button onclick="calc(this)">+</button>
+						<span class="num">1</span>
+						<button onclick="calc(this)">-</button>
+					</td>
+					<td  class="money">5600</td>
+				</tr>
+				<tr>
+					<td>iPad Pro</td>
+					<td class="price">4000</td>
+					<td>
+						<button onclick="calc(this)">+</button>
+						<span class="num">1</span>
+						<button onclick="calc(this)">-</button>
+					</td>
+					<td  class="money">4000</td>
+				</tr>
+				<tr>
+					<td>Mac Pro</td>
+					<td class="price">9800</td>
+					<td>
+						<button onclick="calc(this)">+</button>
+						<span class="num">1</span>
+						<button onclick="calc(this)">-</button>
+					</td>
+					<td  class="money">9800</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3">总计：</td>
+					<td id="total">24000</td>
+				</tr>
+			</tfoot>
+		</table>
+//		<input value="1" id="box"/>
+	</body>
+	<script>
+		function calc(btn) {
+			var total = document.getElementById("total");
+				total.innerHTML =0;
+			var money = document.getElementsByClassName("money");
+			var num = btn.parentNode.getElementsByClassName("num")[0];
+			if (btn.innerHTML=="+") {
+				num.innerHTML++;
+			}else{
+				if(num.innerHTML>1){
+					num.innerHTML--;
+				}
+			}
+			btn.parentNode.parentNode.getElementsByClassName("money")[0].innerHTML=btn.parentNode.parentNode.getElementsByClassName("price")[0].innerHTML*num.innerHTML;
+			for(var i=0;i<money.length;i++){
+				total.innerHTML=parseInt(total.innerHTML)+parseInt(money[i].innerHTML);
+			}
+		}
+//		var oinput = document.getElementById("box");
+//		console.log(oinput.value)
+		
+		
+	</script>
+</html>

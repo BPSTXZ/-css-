@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	  <style>
+	  	input{border: 1px slateblue;border-radius:5px ;}
+	  </style>
+	<body>
+		<input type=button value=点击刷新 onclick="history.go(0)"> 
+	</body>
+	<script>
+		var num=[0,1,2,3,4,5,6,7,8,9,"P","A","a","b","c","d"];
+		function mrra () {
+			var arr=[];
+			while (arr.length<4){
+				var n = parseInt(Math.random()*13);
+				if (arr.indexOf(n)==-1) {
+					arr.push(num[n]+" ")
+				} 
+			}
+			return arr.join("")
+		}
+		document.write("验证码为："+mrra ());
+	</script>
+</html>

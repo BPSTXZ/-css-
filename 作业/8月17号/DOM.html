@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		table{border: 1px solid #000000;margin: 30px auto;}
+		th{width: 150px;height: 50px;text-align: center;}
+		button{width: 30px;height: 30px;}
+	/*	th{widows: 250px;height: 50px;text-align: center;}*/
+		
+	</style>
+	
+	<body>
+		<table cellspacing="0" rules="all">
+			<tr>
+				<th>商品名称</th>
+				<th>单价（￥）</th>
+				<th>数量</th>
+				<th>小计</th>
+			</tr>
+			<tr>
+				<th>iphone7</th>
+				<th>4600</th>
+				<th>
+					<button onclick="calc(this)">+</button>
+					<span>1</span>
+					<button onclick="calc(this)">-</button>
+				</th>
+				<th>
+				   4600
+				</th>
+			</tr>
+			<tr>
+				<th>iphone7</th>
+				<th>4600</th>
+				<th>
+					<button onclick="calc(this)">+</button>
+					<span>1</span>
+					<button onclick="calc(this)">-</button>
+				</th>
+				<th>
+				   4600
+				</th>
+			</tr>
+			<tr>
+				<th>iphone7</th>
+				<th>4600</th>
+				<th>
+					<button onclick="calc(this)">+</button>
+					<span>1</span>
+					<button onclick="calc(this)">-</button>
+				</th>
+				<th>
+				   4600
+				</th>
+			</tr>
+			<tr>
+			  <th>iphone7</th>
+				<th>4600</th>
+				<th>
+					<button onclick="calc(this)">+</button>
+					<span>1</span>
+					<button onclick="calc(this)">-</button>
+				</th>
+				<th>
+				   4600
+				</th>
+			</tr>
+			<tr>
+				<th colspan="3">总计：</th>
+				<th>2400</th>
+			</tr>
+		</table>
+	</body>
+	
+	<script>
+//		console.log(document.body.nodeValue);
+//		console.log(document.body.nodeName);
+//		console.log(document.body.nodeType);
+//		var a=document.body.childNodes[1];                    
+//		console.log(a);
+		function calc (btn) {
+			var num=btn.parentNode.childNodes[3];			
+			if (btn.childNodes[0].nodeValue=="+") {
+				num.childNodes[0].nodeValue++;
+			} else{
+				num.childNodes[0].nodeValue<=1?num.childNodes[0].nodeValue=1:
+				num.childNodes[0].nodeValue--;
+			}
+		}
+	</script>
+</html>

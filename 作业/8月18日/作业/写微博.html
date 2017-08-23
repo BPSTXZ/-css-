@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		 * {margin: 0;padding: 0;}
+ 
+		 .box{
+		 border: 1px solid #000;
+		 width: 600px;
+		 height: auto;
+		 margin:100px auto;
+		 padding:30px 0;
+		 }
+		 textarea{
+		 width: 450px;
+		 resize:none;
+		 margin-left: 20px;
+		 }
+		 ul li{
+		 width: 450px;
+		 list-style: none;
+		 border-bottom: 1px dotted #ccc;
+		 margin-left:20px;
+		 line-height: 30px;
+		 color: #333;
+		 }
+		 ul li a{
+		 float: right;
+		 font-size: 12px;
+		 }
+
+	</style>
+	<body>
+		<div class="box" id="box">
+		 微博发布：</br><textarea cols="30" rows="10"></textarea>
+		 <button>发布</button>
+		</div>
+
+	</body>
+	<script>
+		 // 方法1
+			 window.onload = function () {
+			 	//onload 页面加载完立即执行script
+			 var box = document.getElementById("box");
+			 var boys=box.children;
+			 console.log(boys);
+			 var ul = document.createElement("ul");
+			 box.appendChild(ul);
+			  console.log(ul);
+			 boys[2].onclick = function (){
+			 if(boys[1].value==""){
+			 alert("输入不能为空");
+			 return;
+			 }
+			 console.log(boys[2]);
+			 console.log(boys[1]);
+			 var newli= document.createElement("li");
+			 newli.innerHTML=boys[1].value+"<a href='javascript:;'>删除</a>";
+			  console.log(newli.innerHTML);
+//			 boys[1].value ="";
+			 var lis=ul.children;
+			 if(lis.length==0){ul.appendChild(newli);}else{
+			 ul.insertBefore(newli, lis[0]);
+			 }
+			 //insertBefore在已有的子节点之前插入新的子节点
+			 var as=document.getElementsByTagName("a");
+			 for (var i=0;i<as.length;i++){
+			 as[i].onclick=function(){
+			 ul.removeChild(this.parentNode);
+			 }
+			 }
+			 }
+			 }
+
+	</script>
+</html>

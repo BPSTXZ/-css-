@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	
+	//一
+	<button>动态加载js代码</button>
+  <script>
+    var oBtn = document.getElementsByTagName('button')[0];
+    oBtn.onclick = function() {
+      var oScript = document.createElement('script');
+      oScript.src = 'demo.js';
+      document.body.appendChild(oScript);
+    }
+  </script>
+
+
+//二
+	<input type="text" class="border">
+  <input type="button" value='点击设置内容和CSS'>
+  <script>
+    var oBtn = document.getElementsByTagName('input')[1];
+    var oTxt = document.getElementsByTagName('input')[0];
+    oBtn.onclick = function() {
+      oTxt.value = 'web1707';
+      oTxt.className += ' color';
+    }
+  </script>
+
+
+//三
+<div id="box" class="test" abc="123"></div>
+  <script>
+    var oDiv = document.getElementById('box');
+    console.log(oDiv.id 
+
+); // console.log(oDiv.getAttribute('id'))
+    console.log(oDiv.className);
+    //自定义的属性，不是W3C的属性，都不能用点语法
+    console.log(oDiv.abc);//undefined
+
+    oDiv.setAttribute('abc', '456');
+    console.log(oDiv.getAttribute('abc'));
+  </script>
+
+
+//四
+<div id="box" style="width: 200px; height: 200px; background-color: red; border: 1px solid green;"></div>
+  <script>
+    var oBox = document.getElementById('box');
+    console.log(oBox.style.backgroundColor);
+    console.log(oBox.style.border);
+    console.log(oBox.style.fontSize); //只能够获取到元素的style属性里面的样式
+
+    // CSSOM  CSS Object Model
+    console.log(getComputedStyle(oBox).fontSize);
+
+    //层叠样式表
+    /*
+    浏览器样式
+    用户针对浏览器自定义样式
+    页面中的CSS样式
+
+    user agent 用户代理
+    */
+
+	
+</html>

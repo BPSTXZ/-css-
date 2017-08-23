@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{margin: 0;padding: 0;}
+		li{list-style:none;}
+		li{width:100px; height: 50px;margin-left: 2px;float: left;
+		  background: #ADFF2F;
+		}
+	</style>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+	<script>
+		var list=document.getElementsByTagName("li");
+		for (var i=0;i<list.length;i++) {
+			list[i].onclick=function() {
+				for (var j=0;j<list.length;j++) {
+					list[j].style.background="#ADFF2F";
+				}
+				this.style.background="red";
+//				    list[i].style.background="red";
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+//		第一题
+//		var str = "战士@德玛西亚之力@盖伦@3000#射手@寒冰射手@艾希@2500#法师@流浪法师@瑞兹@2700";
+//		var hero=["职业","称号","姓名","血量"]
+//		var arr = str.split("#");
+//		console.log(arr);
+//		for (var i=0;i<arr.length;i++){
+//			var arr2 =arr[i].split("@");
+//			for(var j=0;j<arr2.length;j++){
+//				document.write(hero[j]+":"+arr2[j]+"&nbsp；");	
+//			}
+//			document.write("<br/>")
+//			
+//		}
+
+
+//第一题
+//		var str = "I come from Beijing";
+//		document.write(str.split(" ").reverse().join(" "))
+
+
+
+
+//第一题
+//		function  rightremove(str,n){
+//			var arr=str.split("");
+//			arr.unshift(arr.splice(arr.length-n).join(""));
+//			console.log(arr.join(""))
+//		}
+//		rightremove("abcdefg",2)
+
+
+
+
+//第一题
+//		function maxstr(str){
+//			// 从头开始a初始位置b后一位
+//			var a=0,b=1;
+//			//相同字符的最大长度        最长相同字符
+//			var maxlength=0,maxstring="";
+//			//挨个遍历去找最长字符
+//			while (a!=(str.length-1)){
+//				//两个字母是否一样
+//				if (str[a]==str[b]) {
+//					//b向右移
+//					b++;
+//				} else{
+//					//比较当前最大长度和旧最大长度
+//					if ((b-a)>=maxlength) {
+//						//赋值 替换
+//						maxlength=b-a;
+//						maxstring = str.slice(a,b);
+//					}
+//					//a向右移，b也恢复到a后一位
+//					a++;
+//					b=a+1
+//				}
+//			}
+//			return(maxstring)
+//		}
+//		str="aaaaabsccccccccccc";
+//		console.log(maxstr(str))
+
+
+
+
+
+
+//第一题
+		function check(str1,str2) {
+			var str,maxlength=0,maxstring="";
+			for(var star=0;star<=str2.length;star++){
+				for(var end=star+1;end<=str2.length;end++){
+					str =str2.substring(star,end);
+					if(str1.indexOf(str)!=-1&&str.length>maxlength){
+						maxlength = str.length;
+						maxstring = str;
+					}
+				}
+			}
+			return maxstring;
+		}
+		console.log(check("abcde","abcde"))
+	</script>
+</html>
